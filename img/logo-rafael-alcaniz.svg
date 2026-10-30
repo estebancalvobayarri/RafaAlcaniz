@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 470 1670 730" width="1670" height="730">
+  <title>Rafael Alcañiz · Fisioterapia &amp; Osteopatía</title>
+  <rect x="75" y="470" width="1670" height="730" fill="#435347"/>
+
+  <g fill="#B4B8B2">
+    <!-- Monograma R -->
+    <path d="M155 562 H326 A99 99 0 0 1 326 760 H319 Z"/>
+    <path d="M155 760 H319 L492 970 H155 Z"/>
+  </g>
+
+  <g fill="none" stroke="#B4B8B2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- RAFAEL -->
+    <path d="M652 732 V578 H716 A36 36 0 0 1 716 650 H711"/>
+    <path d="M652 578 L780 732"/>
+    <path d="M830 732 L895 580 L960 732"/>
+    <path d="M1003 732 V578 H1127 M1003 658 H1120"/>
+    <path d="M1170 732 L1235 580 L1300 732"/>
+    <path d="M1370 582 H1470 M1370 658 H1470 M1370 734 H1466"/>
+    <path d="M1555 580 V734 H1660"/>
+
+    <!-- ALCAÑIZ -->
+    <path d="M650 972 L715 830 L780 972"/>
+    <path d="M822 828 V972 H905"/>
+    <path d="M1080 860 A74 74 0 1 0 1080 940"/>
+    <path d="M1120 972 L1185 830 L1250 972"/>
+    <path d="M1302 972 V828 L1418 972 V828 M1306 800 H1414"/>
+    <path d="M1483 828 V972"/>
+    <path d="M1546 830 H1650 L1548 972 H1652"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="160" y="1112" fill="#B4B8B2" font-family="Montserrat, 'Century Gothic', Futura, 'Helvetica Neue', Arial, sans-serif" font-size="62" font-weight="500" textLength="1490" lengthAdjust="spacing">FISIOTERAPIA &amp; OSTEOPATIA</text>
+</svg>

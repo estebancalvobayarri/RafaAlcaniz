@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rafael Alcañiz · Fisioterapia &amp; Osteopatía en Campanar, València</title>
+<meta name="description" content="Fisioterapia y osteopatía en Campanar (València) con Rafael Alcañiz, más de 15 años de experiencia. Dolor de espalda, hombro, cervicales, vértigo y más. Pide cita: 629 28 41 44.">
+<link rel="icon" href="img/monograma.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#435347;
+  --verde-osc:#36433A;
+  --verde-prof:#2B352E;
+  --piedra:#B4B8B2;
+  --piedra-cl:#DADDD7;
+  --crema:#F1F2EF;
+  --blanco:#FBFBF9;
+  --tinta:#252C27;
+  --tinta-sua:#59615B;
+  --radio:4px;
+  --ancho:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,system-ui,sans-serif;color:var(--tinta);background:var(--blanco);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Jost,Montserrat,sans-serif;font-weight:300;line-height:1.15;letter-spacing:.01em}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+h3{font-size:1.35rem;font-weight:400}
+.etiqueta{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--verde);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.etiqueta::before{content:"";width:34px;height:1.5px;background:currentColor}
+.sec{padding:110px 0}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:var(--radio);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:.25s;border:1.5px solid transparent;cursor:pointer}
+.btn svg{width:17px;height:17px}
+.btn-claro{background:var(--piedra-cl);color:var(--verde-prof)}
+.btn-claro:hover{background:#fff}
+.btn-linea{border-color:rgba(218,221,215,.55);color:var(--piedra-cl)}
+.btn-linea:hover{border-color:var(--piedra-cl);background:rgba(255,255,255,.06)}
+.btn-verde{background:var(--verde);color:var(--blanco)}
+.btn-verde:hover{background:var(--verde-osc)}
+
+/* Cabecera */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.solida{background:rgba(67,83,71,.97);backdrop-filter:blur(6px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;transition:.3s}
+header.solida .nav{height:68px}
+.marca{display:flex;align-items:center;gap:14px;color:var(--piedra-cl);text-decoration:none}
+.marca svg.mono{width:34px;height:42px}
+.marca svg.nombre{height:30px;width:auto}
+.nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;color:var(--piedra-cl);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;opacity:.85;transition:.2s}
+.nav ul a:hover{opacity:1}
+.nav ul a.btn{color:var(--verde-prof);opacity:1}
+.nav .btn{padding:11px 20px}
+.menu-btn{display:none;background:none;border:0;color:var(--piedra-cl);cursor:pointer}
+.menu-btn svg{width:28px;height:28px}
+
+/* Hero */
+.hero{min-height:100vh;background:var(--verde);color:var(--piedra-cl);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;opacity:.07;pointer-events:none}
+.hero-mono{position:absolute;right:-6%;bottom:-8%;width:min(56vw,720px);color:var(--piedra);opacity:.07;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding-top:120px;padding-bottom:80px}
+.hero .etiqueta{color:var(--piedra)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem);color:#EEF0EC;margin-bottom:26px}
+.hero h1 em{font-style:normal;color:var(--piedra)}
+.hero p.lead{font-size:1.08rem;max-width:520px;color:var(--piedra-cl);opacity:.9;margin-bottom:38px}
+.hero .acciones{display:flex;gap:14px;flex-wrap:wrap}
+.hero-datos{display:flex;gap:44px;margin-top:56px;padding-top:30px;border-top:1px solid rgba(218,221,215,.2);flex-wrap:wrap}
+.hero-datos b{display:block;font-family:Jost;font-weight:300;font-size:2.4rem;color:#EEF0EC;line-height:1}
+.hero-datos span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--piedra)}
+.estrellas{color:#E8D9A8;letter-spacing:2px;font-size:.9rem}
+
+/* Huecos de foto */
+.foto{position:relative;background:var(--verde-osc);overflow:hidden;border-radius:var(--radio)}
+.foto img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+.foto .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--piedra);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;text-align:center;padding:20px}
+.foto .ph svg{width:70px;opacity:.5}
+.hero .foto{aspect-ratio:4/5;box-shadow:24px 24px 0 rgba(180,184,178,.16)}
+.hero .foto::after{content:"";position:absolute;inset:16px;border:1px solid rgba(218,221,215,.35);z-index:2;pointer-events:none;border-radius:2px}
+
+/* Sobre */
+.sobre{background:var(--blanco)}
+.sobre .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.sobre .foto{aspect-ratio:1/1.1;background:var(--piedra-cl)}
+.sobre .foto .ph{color:var(--verde)}
+.sobre p{color:var(--tinta-sua);margin-bottom:18px}
+.firma{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.firma div{border-left:2px solid var(--verde);padding-left:16px}
+.firma b{display:block;font-family:Jost;font-weight:400;font-size:1.15rem}
+.firma span{font-size:.82rem;color:var(--tinta-sua)}
+
+/* Tratamientos */
+.tratamientos{background:var(--crema)}
+.cabeza{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.cabeza p{max-width:430px;color:var(--tinta-sua)}
+.rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--piedra-cl);border:1px solid var(--piedra-cl)}
+.carta{background:var(--crema);padding:44px 36px;transition:.3s;position:relative}
+.carta:hover{background:var(--blanco)}
+.carta .num{font-family:Jost;font-size:.85rem;color:var(--verde);letter-spacing:.2em;margin-bottom:28px;display:block}
+.carta svg{width:44px;height:44px;color:var(--verde);margin-bottom:22px}
+.carta h3{margin-bottom:12px}
+.carta p{font-size:.92rem;color:var(--tinta-sua)}
+
+/* Enfoque */
+.enfoque{background:var(--verde-prof);color:var(--piedra-cl);position:relative;overflow:hidden}
+.enfoque .etiqueta{color:var(--piedra)}
+.enfoque h2{color:#EEF0EC;max-width:720px}
+.foto-ancha{aspect-ratio:21/9;margin-top:70px}
+.foto-ancha img{object-position:50% 40%}
+@media (max-width:600px){.foto-ancha{aspect-ratio:4/3}}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:64px;counter-reset:p}
+.paso{border-top:1px solid rgba(180,184,178,.3);padding-top:28px;counter-increment:p}
+.paso::before{content:"0" counter(p);font-family:Jost;font-weight:300;font-size:2.6rem;color:var(--piedra);display:block;margin-bottom:14px;line-height:1}
+.paso h3{color:#EEF0EC;margin-bottom:10px;font-size:1.2rem}
+.paso p{font-size:.9rem;opacity:.8}
+
+/* Galería */
+.galeria .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:16px;margin-top:50px}
+.galeria .foto:first-child{grid-row:span 2}
+.galeria .foto:nth-child(even){background:var(--piedra)}
+.galeria .foto:nth-child(even) .ph{color:var(--verde-prof)}
+
+/* Reseñas */
+.resenas{background:var(--crema)}
+.nota{display:flex;align-items:center;gap:22px;margin-bottom:56px;flex-wrap:wrap}
+.nota b{font-family:Jost;font-weight:300;font-size:4.5rem;line-height:1;color:var(--verde)}
+.nota .estrellas{color:#C9A85A;font-size:1.3rem}
+.nota span{font-size:.85rem;color:var(--tinta-sua)}
+.carrusel{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.resena{background:var(--blanco);padding:38px 34px;border-radius:var(--radio);position:relative;display:flex;flex-direction:column}
+.resena::before{content:"“";font-family:Jost;font-size:5rem;line-height:.6;color:var(--piedra);display:block;margin-bottom:10px}
+.resena p{font-family:Jost;font-weight:300;font-size:1.12rem;line-height:1.55;flex:1}
+.resena small{display:block;margin-top:22px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde);font-weight:500}
+.resena.ancha{grid-column:span 2}
+
+/* Contacto */
+.contacto .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.bloque{margin-bottom:38px}
+.bloque h3{font-size:.72rem;font-family:Montserrat;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--verde);margin-bottom:12px}
+.bloque p,.bloque a{font-size:1.05rem;text-decoration:none}
+.tel{font-family:Jost;font-weight:300;font-size:2.2rem!important;color:var(--tinta)}
+.horario{width:100%;border-collapse:collapse;font-size:.95rem}
+.horario td{padding:11px 0;border-bottom:1px solid var(--piedra-cl)}
+.horario td:last-child{text-align:right;color:var(--tinta-sua)}
+.horario tr.hoy td{color:var(--verde);font-weight:600}
+.horario tr.cerrado td:last-child{color:var(--piedra)}
+.mapa{border-radius:var(--radio);overflow:hidden;min-height:420px;background:var(--piedra-cl);height:100%}
+.mapa iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.55) contrast(.95)}
+
+/* Pie */
+footer{background:var(--verde);color:var(--piedra-cl);padding:70px 0 34px}
+footer .arriba{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(218,221,215,.2)}
+footer .logo-pie{width:min(420px,100%);color:var(--piedra)}
+footer .abajo{display:flex;justify-content:space-between;gap:20px;padding-top:26px;font-size:.75rem;opacity:.7;flex-wrap:wrap}
+
+/* Botón flotante */
+.flotante{position:fixed;right:22px;bottom:22px;z-index:40;height:56px;padding:0 22px 0 18px;border-radius:28px;background:#25D366;color:#fff;display:flex;align-items:center;gap:10px;text-decoration:none;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:.25s}
+.flotante:hover{transform:translateY(-2px);background:#1EBE5A}
+.flotante svg{width:24px;height:24px}
+@media (max-width:600px){.flotante{width:56px;padding:0;justify-content:center}.flotante span{display:none}}
+
+/* Aparición */
+.rev{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rev.vis{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero .wrap,.sobre .wrap,.contacto .wrap{grid-template-columns:1fr;gap:50px}
+  .hero .foto{max-width:440px}
+  .rejilla{grid-template-columns:1fr 1fr}
+  .pasos{grid-template-columns:1fr 1fr}
+  .carrusel{grid-template-columns:1fr}
+  .resena.ancha{grid-column:auto}
+  .galeria .grid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .galeria .foto:first-child{grid-column:span 2;grid-row:auto}
+}
+@media (max-width:820px){
+  .nav ul{position:fixed;inset:68px 0 auto 0;background:var(--verde);flex-direction:column;gap:0;padding:10px 24px 24px;display:none}
+  .nav ul.abierto{display:flex}
+  .nav ul li{width:100%;border-bottom:1px solid rgba(218,221,215,.12)}
+  .nav ul a{display:block;padding:16px 0}
+  .nav ul li:last-child{border:0;padding-top:16px}
+  .menu-btn{display:block}
+  .marca svg.nombre{height:24px}
+}
+@media (max-width:600px){
+  .sec{padding:80px 0}
+  .wrap{padding:0 18px}
+  .rejilla,.pasos{grid-template-columns:1fr}
+  .hero-datos{gap:28px}
+  .hero h1 br{display:none}
+  .galeria .grid{grid-template-columns:1fr;grid-template-rows:none}
+  .galeria .foto{aspect-ratio:4/3}
+  .galeria .foto:first-child{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Símbolos del logo, reutilizables con currentColor -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mono" viewBox="150 556 348 420">
+      <path fill="currentColor" d="M155 562 H326 A99 99 0 0 1 326 760 H319 Z"/>
+      <path fill="currentColor" d="M155 760 H319 L492 970 H155 Z"/>
+    </symbol>
+    <symbol id="letras" viewBox="640 570 1030 412">
+      <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M652 732 V578 H716 A36 36 0 0 1 716 650 H712"/>
+        <path d="M652 578 L780 732"/>
+        <path d="M830 732 L895 580 L960 732"/>
+        <path d="M1003 732 V578 H1127 M1003 658 H1120"/>
+        <path d="M1170 732 L1235 580 L1300 732"/>
+        <path d="M1370 582 H1470 M1370 658 H1470 M1370 734 H1466"/>
+        <path d="M1555 580 V734 H1660"/>
+        <path d="M650 972 L715 830 L780 972"/>
+        <path d="M822 828 V972 H905"/>
+        <path d="M1080 860 A74 74 0 1 0 1080 940"/>
+        <path d="M1120 972 L1185 830 L1250 972"/>
+        <path d="M1302 972 V828 L1418 972 V828 M1306 800 H1414"/>
+        <path d="M1483 828 V972"/>
+        <path d="M1546 830 H1650 L1548 972 H1652"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header id="cab">
+  <div class="wrap nav">
+    <a href="#inicio" class="marca" aria-label="Rafael Alcañiz, inicio">
+      <svg class="mono"><use href="#mono"/></svg>
+      <svg class="nombre" viewBox="0 0 1030 412"><use href="#letras" width="1030" height="412"/></svg>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('abierto')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <ul id="menu">
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#enfoque">Cómo trabajo</a></li>
+      <li><a href="#resenas">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn btn-claro" href="tel:+34629284144">Pedir cita</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <svg class="hero-mono" viewBox="0 0 348 420"><use href="#mono" width="348" height="420"/></svg>
+  <div class="wrap">
+    <div class="rev">
+      <div class="etiqueta">Fisioterapia &amp; Osteopatía · Campanar, València</div>
+      <h1>Encontrar el origen<br>del dolor, <em>no solo<br>calmarlo.</em></h1>
+      <p class="lead">Más de 15 años tratando espalda, cervicales, hombro, vértigos y lesiones con un enfoque global del cuerpo. Una consulta cercana, sin prisas y con las manos de quien te escucha.</p>
+      <div class="acciones">
+        <a class="btn btn-claro" href="tel:+34629284144">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          629 28 41 44
+        </a>
+        <a class="btn btn-linea" href="#tratamientos">Ver tratamientos</a>
+      </div>
+      <div class="hero-datos">
+        <div><b>+15</b><span>años de experiencia</span></div>
+        <div><b>5,0</b><span class="estrellas">★★★★★</span><span style="display:block">en Google</span></div>
+        <div><b>1:1</b><span>atención personal</span></div>
+      </div>
+    </div>
+    <div class="foto rev">
+      <img src="img/hero.jpg" loading="eager" alt="Rafael Alcañiz realizando terapia manual en la espalda de un paciente" onerror="this.remove()">
+      <div class="ph"><svg viewBox="0 0 348 420"><use href="#mono" width="348" height="420"/></svg>img/hero.jpg</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sobre" id="sobre">
+  <div class="wrap">
+    <div class="foto rev">
+      <img loading="lazy" src="img/rafa.jpg" style="object-position:68% 30%" alt="Rafael Alcañiz, fisioterapeuta y osteópata, en la entrada de su consulta" onerror="this.remove()">
+      <div class="ph"><svg viewBox="0 0 348 420" style="color:var(--verde)"><use href="#mono" width="348" height="420"/></svg>img/rafa.jpg</div>
+    </div>
+    <div class="rev">
+      <div class="etiqueta">Sobre mí</div>
+      <h2>Soy Rafa Alcañiz, fisioterapeuta y osteópata.</h2>
+      <p>Llevo más de quince años dedicado a una idea sencilla: el cuerpo funciona como un todo. Un dolor de hombro puede tener su origen en el cuello, y un mareo, en la columna o en la mandíbula. Por eso no me quedo en el síntoma; busco las conexiones hasta dar con la clave del problema.</p>
+      <p>Combino la fisioterapia con la osteopatía para ofrecer un tratamiento manual, preciso y adaptado a cada persona, desde adultos con dolor crónico hasta los más pequeños de la casa.</p>
+      <div class="firma">
+        <div><b>Fisioterapia</b><span>Valoración y tratamiento de lesiones</span></div>
+        <div><b>Osteopatía</b><span>Enfoque global y terapia manual</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tratamientos" id="tratamientos">
+  <div class="wrap">
+    <div class="cabeza rev">
+      <div>
+        <div class="etiqueta">Tratamientos</div>
+        <h2>¿En qué te puedo ayudar?</h2>
+      </div>
+      <p>Cada sesión empieza con una valoración completa para entender qué te pasa y por qué. A partir de ahí, diseñamos el tratamiento.</p>
+    </div>
+    <div class="rejilla rev">
+      <div class="carta">
+        <span class="num">01</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 4v40M18 9h12M17 16h14M17 23h14M17 30h14M18 37h12"/></svg>
+        <h3>Dolor de espalda</h3>
+        <p>Lumbalgias, dorsalgias, ciática y contracturas, tanto agudas como de larga duración.</p>
+      </div>
+      <div class="carta">
+        <span class="num">02</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="24" cy="13" r="7"/><path d="M24 20v8M12 44c0-9 5-16 12-16s12 7 12 16"/></svg>
+        <h3>Cervicales y cefaleas</h3>
+        <p>Dolor de cuello, tensión cervical, dolores de cabeza de origen muscular y latigazo cervical.</p>
+      </div>
+      <div class="carta">
+        <span class="num">03</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="24" cy="24" r="18"/><path d="M24 6a18 18 0 0 1 0 36M10 24c4-6 10-6 14 0s10 6 14 0"/></svg>
+        <h3>Vértigos y mareos</h3>
+        <p>Valoración y tratamiento de mareos y vértigos relacionados con la columna y el sistema musculoesquelético.</p>
+      </div>
+      <div class="carta">
+        <span class="num">04</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="16" cy="14" r="6"/><path d="M22 14h12a6 6 0 0 1 6 6v4M16 20v24M34 24v20"/></svg>
+        <h3>Hombro y extremidades</h3>
+        <p>Hombro doloroso crónico, codo, muñeca, rodilla y tobillo. Recuperación de la movilidad y la fuerza.</p>
+      </div>
+      <div class="carta">
+        <span class="num">05</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 30c0-8 6-14 14-14s14 6 14 14"/><path d="M14 30v6a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-6M24 16V6M18 9l6-3 6 3"/></svg>
+        <h3>Osteopatía</h3>
+        <p>Terapia manual estructural, visceral y craneal para tratar el cuerpo en su conjunto.</p>
+      </div>
+      <div class="carta">
+        <span class="num">06</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="17" cy="14" r="6"/><circle cx="33" cy="20" r="4.5"/><path d="M7 42c0-8 4.5-14 10-14s10 6 10 14M26 42c0-6 3-11 7-11s7 5 7 11"/></svg>
+        <h3>Adultos y niños</h3>
+        <p>Atención para toda la familia, con un trato adaptado a cada edad y a cada necesidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec enfoque" id="enfoque">
+  <div class="wrap">
+    <div class="rev">
+      <div class="etiqueta">Cómo trabajo</div>
+      <h2>Escuchar, valorar y tratar con las manos.</h2>
+    </div>
+    <div class="pasos rev">
+      <div class="paso"><h3>Escucha</h3><p>Hablamos de tu historia, tus molestias y lo que ya has probado.</p></div>
+      <div class="paso"><h3>Valoración</h3><p>Exploración global para encontrar el origen real del problema.</p></div>
+      <div class="paso"><h3>Tratamiento</h3><p>Fisioterapia y osteopatía combinadas, adaptadas a ti.</p></div>
+      <div class="paso"><h3>Seguimiento</h3><p>Pautas y ejercicios para que el resultado se mantenga.</p></div>
+    </div>
+    <div class="foto foto-ancha rev"><img src="img/tratamiento.jpg" alt="Rafael Alcañiz aplicando una técnica de osteopatía en el hombro" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec galeria">
+  <div class="wrap">
+    <div class="rev">
+      <div class="etiqueta">La consulta</div>
+      <h2>Un espacio tranquilo en Campanar.</h2>
+    </div>
+    <div class="grid rev">
+      <div class="foto"><img loading="lazy" src="img/consulta-1.jpg" alt="Sala de tratamiento con camilla y jardín vertical" onerror="this.remove()"><div class="ph"><svg viewBox="0 0 348 420"><use href="#mono" width="348" height="420"/></svg>img/consulta-1.jpg</div></div>
+      <div class="foto"><img loading="lazy" src="img/consulta-2.jpg" style="object-position:30% 50%" alt="Logotipo de madera en la pared de la consulta" onerror="this.remove()"><div class="ph">img/consulta-2.jpg</div></div>
+      <div class="foto"><img loading="lazy" src="img/consulta-3.jpg" style="object-position:50% 70%" alt="Sala de espera con revestimiento de madera" onerror="this.remove()"><div class="ph">img/consulta-3.jpg</div></div>
+      <div class="foto"><img loading="lazy" src="img/consulta-4.jpg" style="object-position:50% 30%" alt="Fachada de la consulta en Campanar" onerror="this.remove()"><div class="ph">img/consulta-4.jpg</div></div>
+      <div class="foto"><img loading="lazy" src="img/consulta-5.jpg" style="object-position:50% 35%" alt="Tratamiento manual de hombro" onerror="this.remove()"><div class="ph">img/consulta-5.jpg</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec resenas" id="resenas">
+  <div class="wrap">
+    <div class="cabeza rev" style="margin-bottom:40px">
+      <div>
+        <div class="etiqueta">Opiniones</div>
+        <h2>Lo que dicen los pacientes.</h2>
+      </div>
+      <div class="nota">
+        <b>5,0</b>
+        <div><div class="estrellas">★★★★★</div><span>15 reseñas en Google</span></div>
+      </div>
+    </div>
+    <div class="carrusel rev">
+      <div class="resena ancha"><p>Un profesional total, capaz de detectar con sus manos todos los secretos y las conexiones del cuerpo, hasta dar con la clave del problema. Maravilloso. A mí me trata desde hace 10 años y, lo que no me descubrieron los traumatólogos, me lo diagnosticó Rafa.</p><small>Eva F. · Google</small></div>
+      <div class="resena"><p>Me pareció muy profesional. Me solucionó mi problema de vértigo y mis dolores de espalda. Lo recomiendo mucho.</p><small>Regina P. · Google</small></div>
+      <div class="resena"><p>Un profesional como la copa de un pino. Fui por un problema crónico de hombro tras rodar por diferentes fisios sin mucho éxito y Rafael supo darme un enfoque diferente que me ha mitigado mucho el dolor. Además es atento y muy simpático. 100% recomendable.</p><small>Borja · Google</small></div>
+      <div class="resena"><p>Lo recomiendo 100%, muy buen profesional y muy atento. Nos atendió a mí y a mi hija pequeña y ¡salimos muy contentas!</p><small>Leia S. · Google</small></div>
+      <div class="resena"><p>Excelente profesional. Muy recomendable.</p><small>Adriano J. · Google</small></div>
+      <div class="resena ancha"><p>Tracte inmillorable. Atenció personalitzada basada en un diagnòstic complet i adaptat a les particularitats de cada pacient. Molt recomanable.</p><small>Josep A. · Google</small></div>
+      <div class="resena"><p>Profesionalidad con mayúsculas, excelente trato y enfoque que les diferencia, sustancialmente, del resto de clínicas.</p><small>Alberto T. · Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contacto" id="contacto">
+  <div class="wrap">
+    <div class="rev">
+      <div class="etiqueta">Contacto y cita</div>
+      <h2>Te espero en la consulta.</h2>
+      <div class="bloque" style="margin-top:34px">
+        <h3>Teléfono</h3>
+        <a class="tel" href="tel:+34629284144">629 28 41 44</a>
+      </div>
+      <div class="bloque">
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/34629284144?text=Hola%20Rafa%2C%20me%20gustar%C3%ADa%20pedir%20cita." target="_blank" rel="noopener" style="color:var(--verde);font-weight:500">Escríbeme por WhatsApp →</a>
+      </div>
+      <div class="bloque">
+        <h3>Email</h3>
+        <a href="mailto:rafaalcaniz@gmail.com">rafaalcaniz@gmail.com</a>
+      </div>
+      <div class="bloque">
+        <h3>Dirección</h3>
+        <p>C/ de la Vall de la Ballestera, 15, bajo izq.<br>Campanar · 46015 València</p>
+        <p style="margin-top:10px"><a href="https://www.google.com/maps/search/?api=1&query=RAFAEL+ALCA%C3%91IZ+FISIOTERAPIA+%26+OSTEOPATIA&query_place_id=ChIJ1bJn8g9PYA0RipQ5sEHv0No" target="_blank" rel="noopener" style="font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--verde);text-decoration:underline;text-underline-offset:4px">Cómo llegar →</a></p>
+      </div>
+      <div class="bloque">
+        <h3>Horario</h3>
+        <table class="horario" id="horario">
+          <tr data-d="1"><td>Lunes</td><td>9:15 – 20:30</td></tr>
+          <tr data-d="2"><td>Martes</td><td>9:15 – 20:30</td></tr>
+          <tr data-d="3"><td>Miércoles</td><td>9:15 – 17:15</td></tr>
+          <tr data-d="4"><td>Jueves</td><td>9:15 – 10:45 · 13:15 – 18:30</td></tr>
+          <tr data-d="5"><td>Viernes</td><td>9:15 – 16:15</td></tr>
+          <tr data-d="6" class="cerrado"><td>Sábado</td><td>Cerrado</td></tr>
+          <tr data-d="0" class="cerrado"><td>Domingo</td><td>Cerrado</td></tr>
+        </table>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-verde" href="tel:+34629284144">Pedir cita por teléfono</a><a class="btn" style="border-color:var(--verde);color:var(--verde)" href="https://wa.me/34629284144?text=Hola%20Rafa%2C%20me%20gustar%C3%ADa%20pedir%20cita." target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="mapa rev">
+      <iframe title="Mapa de la consulta" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=39.4801795,-0.3946502&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="arriba">
+      <svg class="logo-pie" viewBox="0 0 1520 420" aria-label="Rafael Alcañiz">
+        <use href="#mono" width="348" height="420"/>
+        <use href="#letras" x="490" y="6" width="1030" height="412"/>
+      </svg>
+      <div style="font-size:.72rem;letter-spacing:.32em;text-transform:uppercase">Fisioterapia &amp; Osteopatía</div>
+    </div>
+    <div class="abajo">
+      <span>© <span id="anio"></span> Rafael Alcañiz · Fisioterapia &amp; Osteopatía · València</span>
+      <span><a href="tel:+34629284144" style="text-decoration:none">629 28 41 44</a> · <a href="mailto:rafaalcaniz@gmail.com" style="text-decoration:none">rafaalcaniz@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="flotante" href="https://wa.me/34629284144?text=Hola%20Rafa%2C%20me%20gustar%C3%ADa%20pedir%20cita." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp para pedir cita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6z"/><path d="M8.8 9.2c.3 2.6 2.4 4.8 5 5.4l1.1-1.2 1.9.8-.4 1.6c-3.9.2-8.2-3.9-8.2-8l1.6-.4.8 1.9z" fill="currentColor" stroke="none"/></svg><span>WhatsApp</span></a>
+
+<script>
+  const cab=document.getElementById('cab');
+  const onScroll=()=>cab.classList.toggle('solida',window.scrollY>40);
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('abierto')));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+  const hoy=new Date().getDay();
+  const fila=document.querySelector('#horario tr[data-d="'+hoy+'"]');
+  if(fila)fila.classList.add('hoy');
+  document.getElementById('anio').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
