@@ -66,8 +66,8 @@ header.solida{background:rgba(67,83,71,.97);backdrop-filter:blur(6px);box-shadow
 .nav{display:flex;align-items:center;justify-content:space-between;height:84px;transition:.3s}
 header.solida .nav{height:68px}
 .marca{display:flex;align-items:center;gap:14px;color:var(--piedra-cl);text-decoration:none}
-.marca svg.mono{width:34px;height:42px}
-.marca svg.nombre{height:30px;width:auto}
+.marca svg.logo-cab{height:42px;width:auto;aspect-ratio:1520/420;display:block;transition:height .3s}
+header.solida .marca svg.logo-cab{height:36px}
 .nav ul{display:flex;gap:34px;list-style:none;align-items:center}
 .nav ul a{text-decoration:none;color:var(--piedra-cl);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;opacity:.85;transition:.2s}
 .nav ul a:hover{opacity:1}
@@ -205,7 +205,8 @@ footer .abajo{display:flex;justify-content:space-between;align-items:center;gap:
   .nav ul a{display:block;padding:16px 0}
   .nav ul li:last-child{border:0;padding-top:16px}
   .menu-btn{display:block}
-  .marca svg.nombre{height:24px}
+  .marca svg.logo-cab{height:34px}
+  header.solida .marca svg.logo-cab{height:32px}
 }
 @media (max-width:600px){
   .sec{padding:80px 0}
@@ -253,8 +254,10 @@ footer .abajo{display:flex;justify-content:space-between;align-items:center;gap:
 <header id="cab">
   <div class="wrap nav">
     <a href="#inicio" class="marca" aria-label="Rafael Alcañiz, inicio">
-      <svg class="mono"><use href="#mono"/></svg>
-      <svg class="nombre" viewBox="0 0 1030 412"><use href="#letras" width="1030" height="412"/></svg>
+      <svg class="logo-cab" viewBox="0 0 1520 420" aria-hidden="true">
+        <use href="#mono" width="348" height="420"/>
+        <use href="#letras" x="490" y="6" width="1030" height="412"/>
+      </svg>
     </a>
     <button class="menu-btn" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('abierto')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
